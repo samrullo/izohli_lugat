@@ -4,7 +4,7 @@ import PyPDF2
 import logging
 from typing import Tuple,List
 
-def get_pdf_page_number(pdf_file):
+def get_pdf_page_number(pdf_file:pathlib):
     """
     returns number of pages in a pdf file
     """
@@ -15,6 +15,7 @@ def get_pdf_page_number(pdf_file):
         # Get the number of pages
         num_pages = len(pdf_reader.pages)
         return num_pages
+    
 
 
 def generate_first_and_last_pages(pdf_page_numb: int, one_time_read_pages: int)->Tuple[List[int],List[int]]:
